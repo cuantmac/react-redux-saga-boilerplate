@@ -1,33 +1,21 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
-import { DateInput } from 'semantic-ui-calendar-react';
+import { Form, Button, Col } from 'react-bootstrap';
+import moment from 'moment';
+import {DatetimePickerTrigger} from 'rc-datetime-picker';
 import {getDetail} from '../../actions';
 
-import styles from './styles';
+import './style.css'
 
-const options = [
-    { key: 'l', label: 'LAMBDA', value: 'LAMBDA' },
-    { key: 'j', label: 'JANUS', value: 'JANUS' },
-    { key: 'w', label: 'Wizard', value: 'Wizard' },
-    { key: 'q', label: 'Quantum', value: 'Quantum' },
-    { key: 'c', label: 'Clarus', value: 'Clarus' },
-    { key: 'e', label: 'explorer', value: 'explorer' },
-    { key: 't', label: 'Thermal', value: 'Thermal' },
-    { key: 'o', label: 'Operetta CLS', value: 'Operetta CLS' },
-    { key: 'a', label: 'AutoDELFIA', value: 'AutoDELFIA' },
-]
-
-class Details extends Component {
+class Create extends Component {
     constructor(props) {
         super(props);
         this.state = {
             model: '',
-            brand: null,
+            brand: '',
             weight: '',
-            manufactureDate: ''
+            manufactureDate: moment()
         }
-
     }
 
     handleChange(event) {
@@ -38,48 +26,69 @@ class Details extends Component {
         })
     }
 
-    handleChangeSelect = selectedOption => {
+    handleChangeDate = (manufactureDate) => {
         this.setState({
-            brand: selectedOption.value
+            manufactureDate
         });
-    };
-
-    handleChangeDate = (event, {name, value}) => {
-        this.setState({ [name]: value });
     }
 
-    handleCreateNew() {
+    handleSave(event) {
+        event.preventDefault();
         console.log('345');
         console.log(this.state);
     }
 
 
     render() {
-        const { selectedOption } = this.state;
+        const shortcuts = {
+            'Today': moment(),
+            'Yesterday': moment().subtract(1, 'days'),
+            'Clear': ''
+        };
         return (
-            <div style={styles.container}>
-                <div className="ui mini form">
-                    <div className="four fields">
-                        <div className="field">
-                            <label>Model</label>
-                            <input name='model' value={this.state.model} onChange={this.handleChange.bind(this)}/>
-                        </div>
-                        <div className="field">
-                            <label>Brand</label>
-                            <Select options={options} value={selectedOption} onChange={this.handleChangeSelect}/>
-                        </div>
-                        <div className="field">
-                            <label>Weight</label>
-                            <input name='weight' value={this.state.weight} onChange={this.handleChange.bind(this)}/>
-                        </div>
-                        <div className="field">
-                            <label>Manufacture Date</label>
-                            <DateInput name="date" value={this.state.manufactureDate} iconPosition="left" onChange={this.handleChangeDate}/>
-                        </div>
-                    </div>
-                    <div className="ui submit button" onClick={this.handleCreateNew.bind(this)}>Save</div>
-                </div>
+            <div className='container'>
+                <Form>
+                    <Form.Row>
+                        <Form.Group as={Col}>
+                            <Form.Label>Model</Form.Label>
+                            <Form.Control name='model' type="text" value={this.state.model} onChange={this.handleChange.bind(this)}/>
+                        </Form.Group>
 
+                        <Form.Group as={Col} controlId="formGridPassword">
+                            <Form.Label>Brand</Form.Label>
+                            <Form.Control as="select" name='brand' value={this.state.brand} onChange={this.handleChange.bind(this)}>
+                                <option>LAMBDA</option>
+                                <option>JANUS</option>
+                                <option>Wizard</option>
+                                <option>Quantum</option>
+                                <option>Clarus</option>
+                                <option>explorer</option>
+                                <option>Thermal</option>
+                                <option>Operetta CLS</option>
+                                <option>AutoDELFIA</option>
+                            </Form.Control>
+                        </Form.Group>
+
+                        <Form.Group as={Col}>
+                            <Form.Label>Weight</Form.Label>
+                            <Form.Control name='weight' type="text" value={this.state.weight} onChange={this.handleChange.bind(this)}/>
+                        </Form.Group>
+
+                        <Form.Group as={Col}>
+                            <Form.Label>Manufacture Date</Form.Label>
+                            <DatetimePickerTrigger
+                                shortcuts={shortcuts}
+                                moment={this.state.manufactureDate}
+                                onChange={this.handleChangeDate}>
+                                <Form.Control type="text" value={this.state.manufactureDate.format('YYYY-MM-DD')} readOnly />
+                            </DatetimePickerTrigger>
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Button variant="primary" type="submit" onClick={this.handleSave.bind(this)}>
+                        Save
+                    </Button>
+                </Form>
             </div>
         );
     }
@@ -96,4 +105,4 @@ const mapDispatchToProps = dispatch => ({
     getDetail: () => dispatch(getDetail())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Details);
+export default connect(mapStateToProps, mapDispatchToProps)(Create);

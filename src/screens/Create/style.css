@@ -1,0 +1,10 @@
+.container {
+    marginLeft: 40;
+    marginRight: 40;
+    alignItems: 'center';
+    justifyContent: 'center'
+}
+
+.delete_btn {
+    margin-left: 10px;
+}
