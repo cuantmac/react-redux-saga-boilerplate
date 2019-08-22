@@ -2,14 +2,18 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, Table} from 'semantic-ui-react';
 
-import {getUsersSaga} from '../../actions';
+import {getDetail} from '../../actions';
 
-class Home extends Component {
+class Details extends Component {
     constructor(props) {
         super(props);
         this.state = {
             id: this.props.match.params.id
         }
+    }
+
+    componentWillMount() {
+        this.props.getDetail(this.state.id);
     }
 
 
@@ -28,7 +32,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    getUsersSaga: () => dispatch(getUsersSaga())
+    getDetail: () => dispatch(getDetail())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Details);

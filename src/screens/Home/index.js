@@ -12,6 +12,7 @@ class Home extends Component {
     }
 
     handleBtnOnClick() {
+        console.log('1111');
         this.props.getUsersSaga();
     }
 
