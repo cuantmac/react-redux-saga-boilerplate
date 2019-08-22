@@ -35,7 +35,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    getDetail: (e) => dispatch(getDetail(e.target.v))
+    getDetail: () => dispatch(getDetail())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Details);

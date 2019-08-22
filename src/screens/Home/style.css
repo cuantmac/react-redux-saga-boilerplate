@@ -8,3 +8,11 @@
 .delete_btn {
     margin-left: 10px;
 }
+
+.modalFooterBtn {
+    display: inline;
+}
+
+.modalFooterBtn_secondbtn {
+    margin-left: 10px;
+}
