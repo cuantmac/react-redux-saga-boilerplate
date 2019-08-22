@@ -8,3 +8,7 @@
 .delete_btn {
     margin-left: 10px;
 }
+
+.react-datepicker__input-container > input {
+    border: none;
+}

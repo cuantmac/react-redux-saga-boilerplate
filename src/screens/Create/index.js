@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { Form, Button, Col } from 'react-bootstrap';
+import DatePicker from "react-datepicker";
 import moment from 'moment';
-import {DatetimePickerTrigger} from 'rc-datetime-picker';
 import {getDetail} from '../../actions';
 
-import './style.css'
+import './style.css';
 
 class Create extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Create extends Component {
             model: '',
             brand: '',
             weight: '',
-            manufactureDate: moment()
+            manufactureDate: new Date()
         }
     }
 
@@ -26,9 +26,9 @@ class Create extends Component {
         })
     }
 
-    handleChangeDate = (manufactureDate) => {
+    handleChangeDate(date) {
         this.setState({
-            manufactureDate
+            manufactureDate: date
         });
     }
 
@@ -40,13 +40,9 @@ class Create extends Component {
 
 
     render() {
-        const shortcuts = {
-            'Today': moment(),
-            'Yesterday': moment().subtract(1, 'days'),
-            'Clear': ''
-        };
         return (
             <div className='container'>
+
                 <Form>
                     <Form.Row>
                         <Form.Group as={Col}>
@@ -76,12 +72,13 @@ class Create extends Component {
 
                         <Form.Group as={Col}>
                             <Form.Label>Manufacture Date</Form.Label>
-                            <DatetimePickerTrigger
-                                shortcuts={shortcuts}
-                                moment={this.state.manufactureDate}
-                                onChange={this.handleChangeDate}>
-                                <Form.Control type="text" value={this.state.manufactureDate.format('YYYY-MM-DD')} readOnly />
-                            </DatetimePickerTrigger>
+                            <div className='form-control'>
+                                <DatePicker
+                                    selected={this.state.manufactureDate}
+                                    onChange={this.handleChangeDate.bind(this)}
+                                    dateFormat="yyyy-MM-dd"
+                                />
+                            </div>
                         </Form.Group>
                     </Form.Row>
 
@@ -89,6 +86,7 @@ class Create extends Component {
                         Save
                     </Button>
                 </Form>
+
             </div>
         );
     }
