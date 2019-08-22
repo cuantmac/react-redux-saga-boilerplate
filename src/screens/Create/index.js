@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-// import { DateInput } from 'semantic-ui-calendar-react';
-import DatePicker from "react-datepicker";
+import { DateInput } from 'semantic-ui-calendar-react';
 import {getDetail} from '../../actions';
 
 import styles from './styles';
-import "react-datepicker/dist/react-datepicker.css";
 
 const options = [
     { key: 'l', label: 'LAMBDA', value: 'LAMBDA' },
@@ -46,10 +44,8 @@ class Details extends Component {
         });
     };
 
-    handleChangeDate(date) {
-        this.setState({
-            manufactureDate: date
-        });
+    handleChangeDate = (event, {name, value}) => {
+        this.setState({ [name]: value });
     }
 
     handleCreateNew() {
@@ -78,10 +74,10 @@ class Details extends Component {
                         </div>
                         <div className="field">
                             <label>Manufacture Date</label>
-                            <DatePicker selected={this.state.manufactureDate} onChange={this.handleChangeDate.bind(this)}/>
+                            <DateInput name="date" value={this.state.manufactureDate} iconPosition="left" onChange={this.handleChangeDate}/>
                         </div>
                     </div>
-                    <div className="ui submit button" onClick={this.handleCreateNew.bind(this)}>Submit</div>
+                    <div className="ui submit button" onClick={this.handleCreateNew.bind(this)}>Save</div>
                 </div>
 
             </div>

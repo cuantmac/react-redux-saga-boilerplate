@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Button, Table} from 'semantic-ui-react';
+import {Button, ButtonToolbar, Table} from 'react-bootstrap';
 
 import {getUsersSaga} from '../../actions';
-
-import styles from './styles';
+import './style.css'
 
 class Home extends Component {
     constructor() {
@@ -29,56 +28,56 @@ class Home extends Component {
 
 
     render() {
-        let centerClass = 'center';
         const {users} = this.props;
         return (
-            <div style={styles.container}>
-
+            <div className='container'>
                 {users.length > 0
                 && (
                     <div>
-                        <Button color="teal" onClick={this.handleCreate.bind(this)}>
+                        <Button variant="primary" onClick={this.handleCreate.bind(this)}>
                             Create New
                         </Button>
-                    <Table
-                        striped
-                    >
+                    <Table responsive>
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Model</th>
+                            <th>Manufacture Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {users.map(({
+                                        id,
+                                        model,
+                                        manufactureDate
+                                    }, i) => (
+                                        <tr key={i}>
+                                            <td>{id}</td>
+                                            <td>{model}</td>
+                                            <td>{manufactureDate}</td>
+                                            <td>
+                                                <Button variant="primary" onClick={this.handleGoToDetailPage.bind(this,id)}>
+                                                    Details
+                                                </Button>
 
-                        <Table.Header>
-                            <Table.Row>
-                                <Table.HeaderCell>Id</Table.HeaderCell>
-                                <Table.HeaderCell>Model</Table.HeaderCell>
-                                <Table.HeaderCell>Manufacture Date</Table.HeaderCell>
-                                <Table.HeaderCell className={centerClass}>Actions</Table.HeaderCell>
-                            </Table.Row>
-                        </Table.Header>
-                        <Table.Body>
-                            {users.map(({
-                                            id,
-                                            model,
-                                            manufactureDate
-                                        }, i) => (
-                                <Table.Row key={i}>
-                                    <Table.Cell>{id}</Table.Cell>
-                                    <Table.Cell>{model}</Table.Cell>
-                                    <Table.Cell>{manufactureDate}</Table.Cell>
-                                    <Table.Cell className={centerClass}>
-                                        <Button color="teal" onClick={this.handleGoToDetailPage.bind(this, id)}>
-                                            Details
-                                        </Button>
-                                        <Button color="teal" onClick={this.handleDelete.bind(this, id)}>
-                                            Delete
-                                        </Button>
-                                    </Table.Cell>
-                                </Table.Row>))}
-                        </Table.Body>
+                                                <Button variant="primary" className='delete_btn' onClick={this.handleDelete.bind(this,id)}>
+                                                    Delete
+                                                </Button>
+                                            </td>
+                                        </tr>
+                        ))}
+                        </tbody>
                     </Table>
+
                     </div>
                 )
                 }
-                <Button color="teal" onClick={this.handleBtnOnClick.bind(this)}>
-                    Load Users
-                </Button>
+                <ButtonToolbar>
+                    <Button variant="primary" onClick={this.handleBtnOnClick.bind(this)}>
+                        Load Users
+                    </Button>
+                </ButtonToolbar>
             </div>
         );
     }

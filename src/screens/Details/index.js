@@ -12,7 +12,7 @@ class Details extends Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.getDetail();
     }
 
@@ -35,7 +35,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    getDetail: () => dispatch(getDetail())
+    getDetail: (e) => dispatch(getDetail(e.target.v))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Details);
