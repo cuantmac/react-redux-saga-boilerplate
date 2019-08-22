@@ -9,11 +9,11 @@ class Details extends Component {
         super(props);
         this.state = {
             id: this.props.match.params.id
-        }
+        };
     }
 
     componentWillMount() {
-        this.props.getDetail(this.state.id);
+        this.props.getDetail();
     }
 
 
@@ -25,7 +25,10 @@ class Details extends Component {
             </div>
         );
     }
+
 }
+
+
 
 const mapStateToProps = state => ({
     users: state.usersReducer.users

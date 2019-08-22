@@ -8,6 +8,7 @@ import store, { history } from './store';
 
 import Home from './screens/Home';
 import Details from './screens/Details';
+import Create from './screens/Create';
 
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
@@ -20,6 +21,7 @@ export default class App extends Component {
           <div>
             <Route exact path="/" component={Home} />
             <Route exact path="/detail/:id" component={Details} />
+            <Route exact path="/create" component={Create} />
           </div>
         </ConnectedRouter>
       </Provider>

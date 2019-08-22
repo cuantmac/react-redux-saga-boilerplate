@@ -1,7 +1,6 @@
 import { GET_USERS_SAGA, SET_USERS, GET_DETAIL } from '../constants';
 
 export function setUsers(users) {
-  console.log('555');
   return {
     type: SET_USERS,
     users
@@ -10,15 +9,16 @@ export function setUsers(users) {
 
 //Sagas
 export function getUsersSaga() {
-  console.log('222');
   return {
     type: GET_USERS_SAGA
   };
 }
 
 //Sagas
-export function getDetail() {
+export function getDetail(id) {
+  console.log('999', id);
   return {
-    type: GET_DETAIL
+    type: GET_DETAIL,
+    id
   };
 }

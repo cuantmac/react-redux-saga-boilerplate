@@ -11,13 +11,15 @@ class Home extends Component {
         super();
     }
 
+    handleCreate() {
+        this.props.history.push("/create");
+    }
+
     handleBtnOnClick() {
-        console.log('1111');
         this.props.getUsersSaga();
     }
 
     handleGoToDetailPage(id) {
-        console.log('detail', id);
         this.props.history.push("/detail/" + id);
     }
 
@@ -31,11 +33,17 @@ class Home extends Component {
         const {users} = this.props;
         return (
             <div style={styles.container}>
+
                 {users.length > 0
                 && (
+                    <div>
+                        <Button color="teal" onClick={this.handleCreate.bind(this)}>
+                            Create New
+                        </Button>
                     <Table
                         striped
                     >
+
                         <Table.Header>
                             <Table.Row>
                                 <Table.HeaderCell>Id</Table.HeaderCell>
@@ -65,6 +73,7 @@ class Home extends Component {
                                 </Table.Row>))}
                         </Table.Body>
                     </Table>
+                    </div>
                 )
                 }
                 <Button color="teal" onClick={this.handleBtnOnClick.bind(this)}>
