@@ -44,7 +44,6 @@ class Home extends Component {
         this.setState({
             modalShow: false
         })
-        console.log('098', this.state.id);
         this.props.getUsersSaga();
     }
 

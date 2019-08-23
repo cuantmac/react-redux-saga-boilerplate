@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { Form, Button, Col } from 'react-bootstrap';
+import {Form, Button, Col, Modal} from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import moment from 'moment';
 import {saveCreate} from '../../actions';
 
 import './style.css';
+// import Modal from "react-bootstrap/es/Modal";
 
 class Create extends Component {
     constructor(props) {
@@ -15,7 +16,8 @@ class Create extends Component {
             brand: '',
             weight: '',
             selectDate: new Date(),
-            manufactureDate: moment(new Date()).format('YYYY-MM-DD')
+            manufactureDate: moment(new Date()).format('YYYY-MM-DD'),
+            modalShow: false
         }
     }
 
@@ -36,7 +38,9 @@ class Create extends Component {
 
     handleSave(event) {
         event.preventDefault();
-        this.props.saveCreate(this.state);
+        this.props.saveCreate(this.state).then(res => {
+            console.log('765', res);
+            });
     }
 
 
@@ -88,6 +92,23 @@ class Create extends Component {
                     </Button>
                 </Form>
 
+                <Modal show={this.state.modalShow}>
+                    <Modal.Header>
+                        <Modal.Title>Be careful!</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Are you sure to delete this item?</Modal.Body>
+                    <Modal.Footer>
+                        <div className='modalFooterBtn'>
+                            <Button variant="primary">
+                                Close
+                            </Button>
+                            <Button className='modalFooterBtn_secondbtn' variant="primary">
+                                Yes
+                            </Button>
+                        </div>
+
+                    </Modal.Footer>
+                </Modal>
             </div>
         );
     }
@@ -97,7 +118,7 @@ class Create extends Component {
 
 
 const mapStateToProps = state => ({
-    users: state.usersReducer.users
+    res: state.saveNewDataReducer.res
 });
 
 const mapDispatchToProps = (dispatch) => ({
