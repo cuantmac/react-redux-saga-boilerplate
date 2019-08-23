@@ -76,6 +76,115 @@
       "brand": "AutoDELFIA",
       "weight": "2 kg",
       "manufactureDate": "2014-04-11"
+    },
+    {
+      "model": "testmodel",
+      "brand": "testbrand",
+      "weight": "testweight",
+      "manufactureDate": "testmd",
+      "id": "9iGHzP1"
+    },
+    {
+      "id": "cKwZjiV"
+    },
+    {
+      "id": "2zUkduj"
+    },
+    {
+      "id": "_xk1yEa"
+    },
+    {
+      "id": "lNRX0y-"
+    },
+    {
+      "id": "m9UpQ4T"
+    },
+    {
+      "id": "GO1w0zb"
+    },
+    {
+      "id": "PMy8cxM"
+    },
+    {
+      "id": "0MZNs09"
+    },
+    {
+      "id": "_JFuFWL"
+    },
+    {
+      "model": "testmodel",
+      "brand": "testbrand",
+      "weight": "testweight",
+      "manufactureDate": "testmd",
+      "id": "815YwZW"
+    },
+    {
+      "model": "testmodel",
+      "brand": "testbrand",
+      "weight": "testweight",
+      "manufactureDate": "testmd",
+      "id": "EhoWtks"
+    },
+    {
+      "id": "UvgI9yQ"
+    },
+    {
+      "model": "testmodel",
+      "brand": "testbrand",
+      "weight": "testweight",
+      "manufactureDate": "testmd",
+      "id": "uaFAGMY"
+    },
+    {
+      "id": "4t8clRp"
+    },
+    {
+      "id": "6O8gcHc"
+    },
+    {
+      "weight": "testweight",
+      "id": "Lehp-Lk"
+    },
+    {
+      "id": "KB6FfqK"
+    },
+    {
+      "weight": "testweight",
+      "id": "lFWzmKf"
+    },
+    {
+      "id": "JDgIaUe"
+    },
+    {
+      "model": "testmodel",
+      "brand": "testbrand",
+      "weight": "testweight",
+      "manufactureDate": "testmd",
+      "selectDate": "2019-08-23T01:58:16.943Z",
+      "id": "hrOml7y"
+    },
+    {
+      "id": "TrXnwU2"
+    },
+    {
+      "id": "eBdy1O-"
+    },
+    {
+      "id": "JHn7nm9"
+    },
+    {
+      "id": "wzrU4XQ"
+    },
+    {
+      "id": "8xDZN5E"
+    },
+    {
+      "model": "",
+      "brand": "",
+      "weight": "test3",
+      "selectDate": "2019-08-23T02:12:13.073Z",
+      "manufactureDate": "2019-08-23",
+      "id": "4u9XTHw"
     }
   ]
 }

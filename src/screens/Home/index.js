@@ -14,12 +14,12 @@ class Home extends Component {
         }
     }
 
-    handleCreate() {
-        this.props.history.push("/create");
-    }
-
     handleBtnOnClick() {
         this.props.getUsersSaga();
+    }
+
+    handleCreate() {
+        this.props.history.push("/create");
     }
 
     handleGoToDetailPage(id) {

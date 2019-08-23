@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Form, Button, Col } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import moment from 'moment';
-import {getDetail} from '../../actions';
+import {saveCreate} from '../../actions';
 
 import './style.css';
 
@@ -14,7 +14,8 @@ class Create extends Component {
             model: '',
             brand: '',
             weight: '',
-            manufactureDate: new Date()
+            selectDate: new Date(),
+            manufactureDate: moment(new Date()).format('YYYY-MM-DD')
         }
     }
 
@@ -28,14 +29,14 @@ class Create extends Component {
 
     handleChangeDate(date) {
         this.setState({
-            manufactureDate: date
+            selectDate: date,
+            manufactureDate: moment(date).format('YYYY-MM-DD')
         });
     }
 
     handleSave(event) {
         event.preventDefault();
-        console.log('345');
-        console.log(this.state);
+        this.props.saveCreate(this.state);
     }
 
 
@@ -74,7 +75,7 @@ class Create extends Component {
                             <Form.Label>Manufacture Date</Form.Label>
                             <div className='form-control'>
                                 <DatePicker
-                                    selected={this.state.manufactureDate}
+                                    selected={this.state.selectDate}
                                     onChange={this.handleChangeDate.bind(this)}
                                     dateFormat="yyyy-MM-dd"
                                 />
@@ -99,8 +100,8 @@ const mapStateToProps = state => ({
     users: state.usersReducer.users
 });
 
-const mapDispatchToProps = dispatch => ({
-    getDetail: () => dispatch(getDetail())
+const mapDispatchToProps = (dispatch) => ({
+    saveCreate: (data) => dispatch(saveCreate(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Create);
