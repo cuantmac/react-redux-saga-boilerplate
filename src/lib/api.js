@@ -15,7 +15,12 @@ export async function saveNewData(data) {
 }
 
 export async function modifyItem(id, data) {
-  console.log('FOEJFOJ',data);
   const response = await fetch('http://localhost:8000/equipments/' + id,{method: 'PATCH', headers: {'content-type': 'application/json'}, body: JSON.stringify(data)});
+  return response.json();
+}
+
+export async function deleteItem(id) {
+  console.log('FOEJFOJ',id);
+  const response = await fetch('http://localhost:8000/equipments/' + id,{method: 'DELETE'});
   return response.json();
 }

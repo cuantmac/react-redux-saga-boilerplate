@@ -1,4 +1,4 @@
-import {GET_USERS_SAGA, SET_USERS, GET_DETAIL, SAVE_DATA, AFTER_SAVE, MODIFY_ITEM} from '../constants';
+import {GET_USERS_SAGA, SET_USERS, GET_DETAIL, SAVE_DATA, AFTER_SAVE, MODIFY_ITEM, DELETE_ITEM} from '../constants';
 
 export function setUsers(users) {
     return {
@@ -39,6 +39,13 @@ export function modifyItem(id, data) {
     return {
         type: MODIFY_ITEM,
         id,
+        data
+    };
+}
+
+export function deleteItem(data) {
+    return {
+        type: DELETE_ITEM,
         data
     };
 }

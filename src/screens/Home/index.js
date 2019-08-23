@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Button, ButtonToolbar, Table, Modal} from 'react-bootstrap';
 
 import {getUsersSaga} from '../../actions';
+import {deleteItem} from '../../actions';
 import './style.css'
 
 class Home extends Component {
@@ -41,9 +42,10 @@ class Home extends Component {
     }
 
     handleModalDelete() {
+        this.props.deleteItem(this.state.id);
         this.setState({
             modalShow: false
-        })
+        });
         this.props.getUsersSaga();
     }
 
@@ -127,7 +129,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    getUsersSaga: () => dispatch(getUsersSaga())
+    getUsersSaga: () => dispatch(getUsersSaga()),
+    deleteItem: (id) => dispatch(deleteItem(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

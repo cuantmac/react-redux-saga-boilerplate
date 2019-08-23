@@ -4,6 +4,7 @@ import watchGetUsersSaga from './watchers/getUsers';
 import watchGetDetails from './watchers/getDetails';
 import watchSaveNewData from './watchers/saveNew';
 import watchmodifyItem from './watchers/modifyItem';
+import watchdeleteItem from './watchers/deleteItem';
 
 export default function* root() {
   yield all([
@@ -11,5 +12,6 @@ export default function* root() {
     fork(watchGetDetails),
     fork(watchSaveNewData),
     fork(watchmodifyItem),
+    fork(watchdeleteItem),
   ]);
 }

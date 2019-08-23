@@ -8,27 +8,12 @@
       "manufactureDate": "2010-05-12"
     },
     {
-      "id": "asset:002",
-      "model": "JANUS® G3 NGS Express Workstation",
-      "brand": "JANUS",
-      "weight": "125.8 kg",
-      "manufactureDate": "2012-11-10"
-    },
-    {
       "id": "asset:003",
       "model": "LAMBDA XLS+ with Printer",
       "brand": "Quantum",
       "weight": "2.0 kg",
       "manufactureDate": "2019-08-05",
       "selectDate": "2019-08-04T16:00:00.000Z"
-    },
-    {
-      "id": "asset:004",
-      "model": "testmodel",
-      "brand": "testbrand",
-      "weight": "testweight",
-      "manufactureDate": "testmd",
-      "selectDate": "2019-08-23T01:58:16.943Z"
     },
     {
       "id": "asset:005",
@@ -86,9 +71,6 @@
       "weight": "testweight",
       "manufactureDate": "testmd",
       "id": "9iGHzP1"
-    },
-    {
-      "id": "cKwZjiV"
     },
     {
       "id": "2zUkduj"
@@ -727,16 +709,6 @@
       "modalShow": false,
       "hadSaved": false,
       "id": "1mK9b3E"
-    },
-    {
-      "model": "",
-      "brand": "",
-      "weight": "",
-      "selectDate": "2019-08-23T08:45:15.894Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "hadSaved": false,
-      "id": "Gnx8wl6"
     }
   ]
 }

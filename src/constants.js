@@ -4,6 +4,7 @@ const GET_DETAIL = 'GET_DETAIL';
 const SAVE_DATA = 'SAVE_DATA';
 const AFTER_SAVE = 'AFTER_SAVE';
 const MODIFY_ITEM = 'MODIFY_ITEM';
+const DELETE_ITEM = 'DELETE_ITEM';
 
 export {  //eslint-disable-line
     GET_USERS_SAGA,
@@ -11,5 +12,6 @@ export {  //eslint-disable-line
     GET_DETAIL,
     SAVE_DATA,
     AFTER_SAVE,
-    MODIFY_ITEM
+    MODIFY_ITEM,
+    DELETE_ITEM
 };
