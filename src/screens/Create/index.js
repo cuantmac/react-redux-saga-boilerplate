@@ -38,9 +38,8 @@ class Create extends Component {
 
     handleSave(event) {
         event.preventDefault();
-        this.props.saveCreate(this.state).then(res => {
-            console.log('765', res);
-            });
+        this.props.saveCreate(this.state);
+        console.log('111333', state.saveNewDataReducer.res);
     }
 
 
