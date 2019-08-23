@@ -5,7 +5,6 @@ import {afterSave} from "../../actions";
 
 function* SaveNewData(data) {
     const res = yield call(saveNewData, data);
-    console.log('456', res);
     yield put(afterSave(res));
 }
 

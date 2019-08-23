@@ -12,3 +12,7 @@
 .react-datepicker__input-container > input {
     border: none;
 }
+
+.modalFooterBtn_secondbtn {
+    margin-left: 10px;
+}

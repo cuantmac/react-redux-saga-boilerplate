@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Form, Button, Col, Modal} from 'react-bootstrap';
+import {Form, Button, Col, Modal, Alert} from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import moment from 'moment';
 import {saveCreate} from '../../actions';
@@ -17,7 +17,22 @@ class Create extends Component {
             weight: '',
             selectDate: new Date(),
             manufactureDate: moment(new Date()).format('YYYY-MM-DD'),
-            modalShow: false
+            modalShow: false,
+            hadSaved: false
+            // handleAfterSave: (res)=>{
+            //     console.log('000', res);
+            //     if(res.id) {
+            //         this.setState({
+            //             modalShow: true
+            //         })
+            //         setTimeout((
+            //             this.setState({
+            //                 modalShow: false
+            //             })
+            //         ), 5000)
+            //     }
+            //
+            // }
         }
     }
 
@@ -39,14 +54,43 @@ class Create extends Component {
     handleSave(event) {
         event.preventDefault();
         this.props.saveCreate(this.state);
-        console.log('111333', state.saveNewDataReducer.res);
+        this.setState({
+            hadSaved: true
+        });
+        setTimeout(() => {
+            this.props.history.push("/detail/" + this.props.res.id);
+        },500)
+    }
+
+    handleGoBack(event) {
+        event.preventDefault();
+        console.log('opp',this.state);
+        if(this.state.hadSaved) {
+            this.props.history.goBack();
+        }else {
+            this.setState({
+                modalShow: this.state.hadSaved ? false : true
+            })
+        }
+    }
+
+    handleYestoLeave() {
+        this.setState({
+            modalShow: false
+        });
+        this.props.history.goBack();
+    }
+
+    handleNotoLeave() {
+        this.setState({
+            modalShow: false
+        });
     }
 
 
     render() {
         return (
             <div className='container'>
-
                 <Form>
                     <Form.Row>
                         <Form.Group as={Col}>
@@ -89,25 +133,29 @@ class Create extends Component {
                     <Button variant="primary" type="submit" onClick={this.handleSave.bind(this)}>
                         Save
                     </Button>
+                    <Button variant="primary" type="submit" className='modalFooterBtn_secondbtn' onClick={this.handleGoBack.bind(this)}>
+                        GoBack
+                    </Button>
                 </Form>
-
                 <Modal show={this.state.modalShow}>
                     <Modal.Header>
                         <Modal.Title>Be careful!</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Are you sure to delete this item?</Modal.Body>
+                    <Modal.Body>Your input has not been saved, are you sure leave?</Modal.Body>
                     <Modal.Footer>
                         <div className='modalFooterBtn'>
-                            <Button variant="primary">
-                                Close
-                            </Button>
-                            <Button className='modalFooterBtn_secondbtn' variant="primary">
+                            <Button variant="primary" onClick={this.handleYestoLeave.bind(this)}>
                                 Yes
+                            </Button>
+                            <Button className='modalFooterBtn_secondbtn' variant="primary" onClick={this.handleNotoLeave.bind(this)}>
+                                No
                             </Button>
                         </div>
 
                     </Modal.Footer>
                 </Modal>
+
+
             </div>
         );
     }
