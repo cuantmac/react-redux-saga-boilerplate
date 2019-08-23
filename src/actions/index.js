@@ -1,4 +1,4 @@
-import {GET_USERS_SAGA, SET_USERS, GET_DETAIL, SAVE_DATA, AFTER_SAVE} from '../constants';
+import {GET_USERS_SAGA, SET_USERS, GET_DETAIL, SAVE_DATA, AFTER_SAVE, MODIFY_ITEM} from '../constants';
 
 export function setUsers(users) {
     return {
@@ -15,7 +15,6 @@ export function getUsersSaga() {
 }
 
 export function getDetail(id) {
-    console.log('999', id);
     return {
         type: GET_DETAIL,
         id
@@ -33,5 +32,13 @@ export function afterSave(res) {
     return {
         type: AFTER_SAVE,
         res
+    };
+}
+
+export function modifyItem(id, data) {
+    return {
+        type: MODIFY_ITEM,
+        id,
+        data
     };
 }

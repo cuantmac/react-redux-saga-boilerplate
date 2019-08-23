@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Form, Button, Col, Modal, Alert} from 'react-bootstrap';
+import {Form, Button, Col, Modal} from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import moment from 'moment';
 import {saveCreate} from '../../actions';
@@ -19,20 +19,6 @@ class Create extends Component {
             manufactureDate: moment(new Date()).format('YYYY-MM-DD'),
             modalShow: false,
             hadSaved: false
-            // handleAfterSave: (res)=>{
-            //     console.log('000', res);
-            //     if(res.id) {
-            //         this.setState({
-            //             modalShow: true
-            //         })
-            //         setTimeout((
-            //             this.setState({
-            //                 modalShow: false
-            //             })
-            //         ), 5000)
-            //     }
-            //
-            // }
         }
     }
 

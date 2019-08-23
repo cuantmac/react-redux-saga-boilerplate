@@ -4,8 +4,9 @@ import { GET_DETAIL } from '../../constants';
 import { setUsers } from '../../actions';
 import { getDetails } from '../../lib/api';
 
-function* workerGetDetails() {
-  const users = yield call(getDetails);
+function* workerGetDetails(data) {
+  console.log('444',data);
+  const users = yield call(getDetails, data.id);
   yield put(setUsers(users));
 }
 

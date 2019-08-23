@@ -17,16 +17,18 @@
     {
       "id": "asset:003",
       "model": "LAMBDA XLS+ with Printer",
-      "brand": "LAMBDA",
+      "brand": "Quantum",
       "weight": "2.0 kg",
-      "manufactureDate": "2008-01-01"
+      "manufactureDate": "2019-08-05",
+      "selectDate": "2019-08-04T16:00:00.000Z"
     },
     {
       "id": "asset:004",
-      "model": "Wizard 2-Detector Gamma Counter, 550 samples",
-      "brand": "Wizard",
-      "weight": "55.0 kg",
-      "manufactureDate": "2015-03-10"
+      "model": "testmodel",
+      "brand": "testbrand",
+      "weight": "testweight",
+      "manufactureDate": "testmd",
+      "selectDate": "2019-08-23T01:58:16.943Z"
     },
     {
       "id": "asset:005",
@@ -37,10 +39,11 @@
     },
     {
       "id": "asset:006",
-      "model": "Biodiesel Glycerin Analysis System 230V",
+      "model": "Biodiesel Glycerin Analysis System 230VVVVVV",
       "brand": "Clarus",
       "weight": "25.8 kg",
-      "manufactureDate": "2008-08-28"
+      "manufactureDate": "2019-07-28",
+      "selectDate": "2019-07-27T16:00:00.000Z"
     },
     {
       "id": "asset:007",
