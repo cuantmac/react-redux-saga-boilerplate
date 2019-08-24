@@ -51,6 +51,9 @@ class Details extends Component {
     handleSave(event) {
         event.preventDefault();
         this.props.modifyItem(this.state.id, this.state);
+        setTimeout(() => {
+            this.props.history.push("/");
+        },800)
     }
 
     handleGoBack(event) {

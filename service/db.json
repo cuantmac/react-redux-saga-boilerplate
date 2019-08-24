@@ -9,7 +9,7 @@
     },
     {
       "id": "asset:003",
-      "model": "test003000000000000000",
+      "model": "test003",
       "brand": "Quantum",
       "weight": "80000 kg",
       "manufactureDate": "2019-08-24",
@@ -59,10 +59,21 @@
     },
     {
       "id": "asset:011",
-      "model": "AutoDELFIA® Instrument",
+      "model": "1234567",
       "brand": "AutoDELFIA",
       "weight": "2 kg",
-      "manufactureDate": "2014-04-11"
+      "manufactureDate": "2019-08-24",
+      "selectDate": "2019-08-23T16:00:00.000Z"
+    },
+    {
+      "model": "test082410",
+      "brand": "Wizard",
+      "weight": "77777",
+      "selectDate": "2019-08-27T08:24:10.000Z",
+      "manufactureDate": "2019-08-27",
+      "modalShow": false,
+      "hadSaved": false,
+      "id": "JM9lYB5"
     }
   ]
 }

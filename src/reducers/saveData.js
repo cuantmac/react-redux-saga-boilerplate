@@ -1,4 +1,4 @@
-import {AFTER_SAVE, SAVE_DATA} from '../constants';
+import {AFTER_SAVE} from '../constants';
 
 const initialState = { res: [] };
 
