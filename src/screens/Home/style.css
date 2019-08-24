@@ -2,7 +2,8 @@
     marginLeft: 40;
     marginRight: 40;
     alignItems: 'center';
-    justifyContent: 'center'
+    justifyContent: 'center';
+    margin-top: 10px;
 }
 
 .delete_btn {
@@ -15,4 +16,12 @@
 
 .modalFooterBtn_secondbtn {
     margin-left: 10px;
+}
+
+.cre_btn {
+    margin-bottom: 10px;
+}
+
+.action_colum {
+    text-align: center;
 }

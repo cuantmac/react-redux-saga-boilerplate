@@ -23,26 +23,11 @@
       "manufactureDate": "2012-12-12"
     },
     {
-      "id": "asset:006",
-      "model": "Biodiesel Glycerin Analysis System 230VVVVVV",
-      "brand": "Clarus",
-      "weight": "25.8 kg",
-      "manufactureDate": "2019-07-28",
-      "selectDate": "2019-07-27T16:00:00.000Z"
-    },
-    {
       "id": "asset:007",
       "model": "High-throughput, High Content RNAi Screening",
       "brand": "explorer",
       "weight": "35 kg",
       "manufactureDate": "2017-11-02"
-    },
-    {
-      "id": "asset:008",
-      "model": "PinAAcle 900F Atomic Absorption Spectrometer",
-      "brand": "LAMBDA",
-      "weight": "15.5 kg",
-      "manufactureDate": "2018-09-15"
     },
     {
       "id": "asset:009",
@@ -73,30 +58,6 @@
       "id": "9iGHzP1"
     },
     {
-      "id": "2zUkduj"
-    },
-    {
-      "id": "_xk1yEa"
-    },
-    {
-      "id": "lNRX0y-"
-    },
-    {
-      "id": "m9UpQ4T"
-    },
-    {
-      "id": "GO1w0zb"
-    },
-    {
-      "id": "PMy8cxM"
-    },
-    {
-      "id": "0MZNs09"
-    },
-    {
-      "id": "_JFuFWL"
-    },
-    {
       "model": "testmodel",
       "brand": "testbrand",
       "weight": "testweight",
@@ -111,34 +72,11 @@
       "id": "EhoWtks"
     },
     {
-      "id": "UvgI9yQ"
-    },
-    {
       "model": "testmodel",
       "brand": "testbrand",
       "weight": "testweight",
       "manufactureDate": "testmd",
       "id": "uaFAGMY"
-    },
-    {
-      "id": "4t8clRp"
-    },
-    {
-      "id": "6O8gcHc"
-    },
-    {
-      "weight": "testweight",
-      "id": "Lehp-Lk"
-    },
-    {
-      "id": "KB6FfqK"
-    },
-    {
-      "weight": "testweight",
-      "id": "lFWzmKf"
-    },
-    {
-      "id": "JDgIaUe"
     },
     {
       "model": "testmodel",
@@ -147,21 +85,6 @@
       "manufactureDate": "testmd",
       "selectDate": "2019-08-23T01:58:16.943Z",
       "id": "hrOml7y"
-    },
-    {
-      "id": "TrXnwU2"
-    },
-    {
-      "id": "eBdy1O-"
-    },
-    {
-      "id": "JHn7nm9"
-    },
-    {
-      "id": "wzrU4XQ"
-    },
-    {
-      "id": "8xDZN5E"
     },
     {
       "model": "",
@@ -230,14 +153,6 @@
     {
       "model": "",
       "brand": "",
-      "weight": "test0987",
-      "selectDate": "2019-08-23T02:50:10.014Z",
-      "manufactureDate": "2019-08-23",
-      "id": "FjNIs9R"
-    },
-    {
-      "model": "",
-      "brand": "",
       "weight": "test333",
       "selectDate": "2019-08-23T02:50:54.213Z",
       "manufactureDate": "2019-08-23",
@@ -298,14 +213,6 @@
       "selectDate": "2019-08-23T03:18:42.563Z",
       "manufactureDate": "2019-08-23",
       "id": "A74Eqn4"
-    },
-    {
-      "model": "test",
-      "brand": "",
-      "weight": "",
-      "selectDate": "2019-08-23T03:19:49.364Z",
-      "manufactureDate": "2019-08-23",
-      "id": "QppRyUP"
     },
     {
       "model": "test",
@@ -632,15 +539,6 @@
       "id": "1s12nlA"
     },
     {
-      "model": "",
-      "brand": "",
-      "weight": "",
-      "selectDate": "2019-08-23T08:17:55.946Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "id": "52BJlEu"
-    },
-    {
       "model": "test01",
       "brand": "",
       "weight": "test02",
@@ -671,44 +569,14 @@
       "id": "2VuXO49"
     },
     {
-      "model": "fefef",
-      "brand": "",
-      "weight": "test678",
-      "selectDate": "2019-08-26T08:39:58.000Z",
-      "manufactureDate": "2019-08-26",
+      "model": "test082401",
+      "brand": "Quantum",
+      "weight": "88kg",
+      "selectDate": "2018-02-12T02:40:40.000Z",
+      "manufactureDate": "2018-02-12",
       "modalShow": false,
       "hadSaved": false,
-      "id": "oVsweWZ"
-    },
-    {
-      "model": "gregerg",
-      "brand": "",
-      "weight": "fwetgw",
-      "selectDate": "2019-08-23T08:42:57.798Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "hadSaved": false,
-      "id": "pD7Bc5I"
-    },
-    {
-      "model": "",
-      "brand": "",
-      "weight": "",
-      "selectDate": "2019-08-23T08:43:34.079Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "hadSaved": false,
-      "id": "x5H8wFl"
-    },
-    {
-      "model": "",
-      "brand": "",
-      "weight": "",
-      "selectDate": "2019-08-23T08:44:18.179Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "hadSaved": false,
-      "id": "1mK9b3E"
+      "id": "u29jhsq"
     }
   ]
 }

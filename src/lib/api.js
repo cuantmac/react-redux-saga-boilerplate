@@ -20,7 +20,6 @@ export async function modifyItem(id, data) {
 }
 
 export async function deleteItem(id) {
-  console.log('FOEJFOJ',id);
   const response = await fetch('http://localhost:8000/equipments/' + id,{method: 'DELETE'});
   return response.json();
 }

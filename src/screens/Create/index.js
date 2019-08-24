@@ -6,7 +6,6 @@ import moment from 'moment';
 import {saveCreate} from '../../actions';
 
 import './style.css';
-// import Modal from "react-bootstrap/es/Modal";
 
 class Create extends Component {
     constructor(props) {
@@ -50,7 +49,6 @@ class Create extends Component {
 
     handleGoBack(event) {
         event.preventDefault();
-        console.log('opp',this.state);
         if(this.state.hadSaved) {
             this.props.history.goBack();
         }else {
@@ -140,15 +138,10 @@ class Create extends Component {
 
                     </Modal.Footer>
                 </Modal>
-
-
             </div>
         );
     }
-
 }
-
-
 
 const mapStateToProps = state => ({
     res: state.saveNewDataReducer.res

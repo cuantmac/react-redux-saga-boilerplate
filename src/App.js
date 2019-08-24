@@ -10,7 +10,6 @@ import Home from './screens/Home';
 import Details from './screens/Details';
 import Create from './screens/Create';
 
-// import 'semantic-ui-css/semantic.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 

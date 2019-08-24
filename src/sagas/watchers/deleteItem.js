@@ -5,7 +5,6 @@ import { setUsers } from '../../actions';
 import { deleteItem } from '../../lib/api';
 
 function* workerdeleteItem(data) {
-  console.log('qsdfffff',data);
   const users = yield call(deleteItem, data.data);
   yield put(setUsers(users));
 }

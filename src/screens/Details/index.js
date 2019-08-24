@@ -59,7 +59,6 @@ class Details extends Component {
     }
 
 
-
     render() {
         const {users} = this.props;
         return (

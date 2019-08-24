@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, ButtonToolbar, Table, Modal} from 'react-bootstrap';
-
 import {getUsersSaga} from '../../actions';
 import {deleteItem} from '../../actions';
+
 import './style.css'
 
 class Home extends Component {
@@ -28,7 +28,6 @@ class Home extends Component {
     }
 
     handleDelete(id) {
-        console.log('delete', id);
         this.setState({
             modalShow: true,
             id: id
@@ -57,7 +56,7 @@ class Home extends Component {
                 {users.length > 0
                 && (
                     <div>
-                        <Button variant="primary" onClick={this.handleCreate.bind(this)}>
+                        <Button variant="primary" className='cre_btn' onClick={this.handleCreate.bind(this)}>
                             Create New
                         </Button>
                         <Table responsive>
@@ -66,7 +65,7 @@ class Home extends Component {
                                 <th>Id</th>
                                 <th>Model</th>
                                 <th>Manufacture Date</th>
-                                <th>Actions</th>
+                                <th className='action_colum'>Actions</th>
                             </tr>
                             </thead>
                             <tbody>

@@ -5,7 +5,6 @@ import { setUsers } from '../../actions';
 import { modifyItem } from '../../lib/api';
 
 function* workermodifyItem(data) {
-  console.log('XCV',data);
   const users = yield call(modifyItem, data.id, data.data);
   yield put(setUsers(users));
 }
