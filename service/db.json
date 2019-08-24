@@ -44,13 +44,6 @@
       "manufactureDate": "2014-04-11"
     },
     {
-      "id": "asset:011",
-      "model": "AutoDELFIA® Instrument",
-      "brand": "AutoDELFIA",
-      "weight": "2 kg",
-      "manufactureDate": "2014-04-11"
-    },
-    {
       "model": "testmodel",
       "brand": "testbrand",
       "weight": "testweight",
@@ -85,14 +78,6 @@
       "manufactureDate": "testmd",
       "selectDate": "2019-08-23T01:58:16.943Z",
       "id": "hrOml7y"
-    },
-    {
-      "model": "",
-      "brand": "",
-      "weight": "test3",
-      "selectDate": "2019-08-23T02:12:13.073Z",
-      "manufactureDate": "2019-08-23",
-      "id": "4u9XTHw"
     },
     {
       "model": "",
@@ -173,14 +158,6 @@
       "selectDate": "2019-08-23T02:53:43.938Z",
       "manufactureDate": "2019-08-23",
       "id": "W0YYFes"
-    },
-    {
-      "model": "",
-      "brand": "",
-      "weight": "test678",
-      "selectDate": "2019-08-23T02:55:43.307Z",
-      "manufactureDate": "2019-08-23",
-      "id": "0Sxs6PJ"
     },
     {
       "model": "",
@@ -267,15 +244,6 @@
       "manufactureDate": "2019-08-23",
       "modalShow": false,
       "id": "OEoquyi"
-    },
-    {
-      "model": "test",
-      "brand": "",
-      "weight": "testeee",
-      "selectDate": "2019-08-23T04:27:47.435Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "id": "6n01urH"
     },
     {
       "model": "",
@@ -521,24 +489,6 @@
       "id": "RyZRNPO"
     },
     {
-      "model": "",
-      "brand": "",
-      "weight": "test567",
-      "selectDate": "2019-08-23T08:09:23.999Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "id": "eo17YvZ"
-    },
-    {
-      "model": "",
-      "brand": "",
-      "weight": "test567",
-      "selectDate": "2019-08-23T08:09:23.999Z",
-      "manufactureDate": "2019-08-23",
-      "modalShow": false,
-      "id": "1s12nlA"
-    },
-    {
       "model": "test01",
       "brand": "",
       "weight": "test02",
@@ -557,16 +507,6 @@
       "modalShow": false,
       "hadSaved": false,
       "id": "00oPiaD"
-    },
-    {
-      "model": "test04",
-      "brand": "explorer",
-      "weight": "yesyr",
-      "selectDate": "2019-08-28T08:35:28.000Z",
-      "manufactureDate": "2019-08-28",
-      "modalShow": false,
-      "hadSaved": false,
-      "id": "2VuXO49"
     },
     {
       "model": "test082401",

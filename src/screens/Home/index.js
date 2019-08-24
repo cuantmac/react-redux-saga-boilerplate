@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Button, ButtonToolbar, Table, Modal} from 'react-bootstrap';
+import {Button, Table, Modal} from 'react-bootstrap';
 import {getUsersSaga} from '../../actions';
 import {deleteItem} from '../../actions';
 
@@ -111,13 +111,11 @@ class Home extends Component {
                         </Modal>
 
                     </div>
-                )
-                }
-                <ButtonToolbar>
-                    <Button variant="primary" onClick={this.handleBtnOnClick.bind(this)}>
+                )}
+                {users.length <= 0 ?
+                    <Button variant="primary" className='loadUser_btn' onClick={this.handleBtnOnClick.bind(this)}>
                         Load Users
-                    </Button>
-                </ButtonToolbar>
+                    </Button> : null}
             </div>
         );
     }
