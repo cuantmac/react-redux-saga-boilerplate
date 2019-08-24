@@ -44,7 +44,7 @@ class Create extends Component {
         });
         setTimeout(() => {
             this.props.history.push("/detail/" + this.props.res.id);
-        },500)
+        },800)
     }
 
     handleGoBack(event) {

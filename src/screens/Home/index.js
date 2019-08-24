@@ -51,6 +51,7 @@ class Home extends Component {
 
     render() {
         const {users} = this.props;
+        console.log('333', users);
         return (
             <div className='container'>
                 {users.length > 0
@@ -78,7 +79,7 @@ class Home extends Component {
                                     <td>{id}</td>
                                     <td>{model}</td>
                                     <td>{manufactureDate}</td>
-                                    <td>
+                                    <td className='action_colum'>
                                         <Button variant="primary" onClick={this.handleGoToDetailPage.bind(this,id)}>
                                             Details
                                         </Button>
@@ -112,7 +113,7 @@ class Home extends Component {
 
                     </div>
                 )}
-                {users.length <= 0 ?
+                {(users.length <= 0 || !Array.isArray(users)) ?
                     <Button variant="primary" className='loadUser_btn' onClick={this.handleBtnOnClick.bind(this)}>
                         Load Users
                     </Button> : null}
